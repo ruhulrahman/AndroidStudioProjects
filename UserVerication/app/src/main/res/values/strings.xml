@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UserVerication</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="verified">Verified</string>
+    <string name="user_details">User Details</string>
+    <string name="user_list">User List</string>
+</resources>

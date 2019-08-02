@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Student Management"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="25dp"
+            android:layout_weight="7.5"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/ruhul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/yellow"
+                android:text="@string/ruhul_name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rasel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/yellow"
+                android:text="@string/rasel_name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/naeem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/yellow"
+                android:text="@string/naeem_name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/anfal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/yellow"
+                android:text="@string/anfal_name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/humayun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/yellow"
+                android:text="@string/humayun_name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/harun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/yellow"
+                android:text="@string/harun_name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/jibon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/yellow"
+                android:text="@string/jibon_name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/masud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/yellow"
+                android:text="@string/masud_name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/sumon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/yellow"
+                android:text="@string/sumon_name"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

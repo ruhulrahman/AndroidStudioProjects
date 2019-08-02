@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Daily Expense</string>
+    <string name="total_expence">Total Expense</string>
+    <string name="bdt_3_000">BDT 3,000</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bottom_navigation_false">BottomNavigationFalseActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="weak">Weak</string>
+    <string name="today">Today</string>
+    <string name="month">Month</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="enter_expense_ammount">Enter Expense Ammount</string>
+    <string name="enter_date">Enter Date</string>
+    <string name="enter_time">Enter Time</string>
+    <string name="update_document">Update Document</string>
+    <string name="save">Save</string>
+    <string name="expense_list">Expense List</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="cost">Cost</string>
+    <string name="expense_details">Expense Details</string>
+</resources>

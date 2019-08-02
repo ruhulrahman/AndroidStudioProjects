@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/attention"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Attention: This calculator use only for government employee"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/text"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/text"
+        android:textAlignment="center"
+        android:textSize="21sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#222"
+        android:text="If you want to calculate your yearly income tax fiscal year wise from your salary then use this calculator"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:textSize="21sp"
+        android:layout_above="@+id/editTxt"
+        android:layout_centerInParent="true"
+        android:paddingTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:gravity="center"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Basic Salary..."
+        android:id="@+id/editTxt"
+        android:inputType="number"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/btn" />
+
+
+
+    <Button
+        android:text="Calculate Income Tax"
+        android:id="@+id/btn"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/developer"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorPrimary"
+        android:padding="15dp"
+        android:layout_marginTop="50dp"
+        android:background="#222"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="App Developed by Ruhul"/>
+
+</LinearLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@android:color/holo_red_dark"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Two numbers"
+                android:textAllCaps="true"/>
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:id="@+id/firstNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter First Number"
+                android:inputType="number"/>
+            <EditText
+                android:layout_marginTop="20dp"
+                android:id="@+id/secondNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Second Number"
+                android:inputType="number"/>
+
+            <LinearLayout
+                android:weightSum="5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnPlus"
+                    android:layout_weight="1"
+                    android:text="+"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btnMinus"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btnMulti"
+                    android:layout_weight="1"
+                    android:text="*"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btnDiv"
+                    android:layout_weight="1"
+                    android:text="÷"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:textColor="@android:color/holo_red_dark"
+                    android:id="@+id/btnClear"
+                    android:layout_weight="1"
+                    android:text="CLR"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Result"
+                android:textAllCaps="true"/>
+            <TextView
+                android:id="@+id/resultTv"
+                android:textColor="@android:color/holo_green_dark"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"/>
+            <View
+                android:background="@android:color/darker_gray"
+
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
