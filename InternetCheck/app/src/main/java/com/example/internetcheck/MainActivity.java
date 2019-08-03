@@ -3,6 +3,7 @@ package com.example.internetcheck;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        IntentFilter intentFilter = new IntentFilter();
+        IntentFilter intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(checkInternet, intentFilter);
     }
 

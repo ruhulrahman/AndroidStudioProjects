@@ -20,7 +20,7 @@ public class CheckInternet extends BroadcastReceiver {
         if(isConnected){
             Toast.makeText(context, "internet Connected", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(context, "internet disconnected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "internet disconnected", Toast.LENGTH_LONG).show();
         }
     }
 }
