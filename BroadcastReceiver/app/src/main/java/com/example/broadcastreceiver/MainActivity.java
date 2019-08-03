@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.IntentFilter;
 import android.os.Bundle;
 
-import static android.provider.Settings.ACTION_AIRPLANE_MODE_SETTINGS;
+import static android.content.Intent.ACTION_AIRPLANE_MODE_CHANGED;
+
 
 public class MainActivity extends AppCompatActivity {
     private CheckAirplaneMode checkAirplaneMode = new CheckAirplaneMode();
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        IntentFilter intentFilter = new IntentFilter(ACTION_AIRPLANE_MODE_SETTINGS);
+        IntentFilter intentFilter = new IntentFilter(ACTION_AIRPLANE_MODE_CHANGED);
         registerReceiver(checkAirplaneMode, intentFilter);
     }
 
