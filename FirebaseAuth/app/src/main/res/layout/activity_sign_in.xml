@@ -30,6 +30,7 @@
                 android:inputType="textPassword" />
 
             <Button
+                android:id="@+id/loginBtn"
                 android:background="@color/colorPrimary"
                 android:text="Login"
                 android:textColor="@android:color/white"
@@ -39,15 +40,18 @@
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:background="@color/electromagnetic"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textColor="@android:color/holo_blue_dark"
+                    android:textColor="@color/sunflower"
                     android:text="If you don't have account? "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:id="@+id/signUpTV"
                     android:text="@string/sign_up"
                     android:textColor="@android:color/holo_red_dark"
                     android:layout_width="wrap_content"

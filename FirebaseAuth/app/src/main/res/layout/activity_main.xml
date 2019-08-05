@@ -4,11 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_red"
     tools:context=".MainActivity">
 
-    <TextView
-        android:text="Hello"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <TextView
+            android:textAlignment="center"
+            android:background="@color/amethyst"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:text="Welcome to my app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </LinearLayout>
