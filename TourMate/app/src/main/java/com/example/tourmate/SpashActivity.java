@@ -1,16 +1,16 @@
-package com.example.splashthread;
+package com.example.tourmate;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.TransitionDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
-    TransitionDrawable animation;
+public class SpashActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_spash);
         Thread thread = new Thread(){
             @Override
             public void run() {
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 finally {
-                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    Intent intent = new Intent(SpashActivity.this, LoginActivity.class);
                     startActivity(intent);
                 }
             }
@@ -29,6 +29,4 @@ public class MainActivity extends AppCompatActivity {
 
         thread.start();
     }
-
-
 }

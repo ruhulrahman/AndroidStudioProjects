@@ -12,12 +12,13 @@ public class MyService extends Service {
     @Override
     public void onCreate() {
         Log.d(TAG, "onCreate: "+Thread.currentThread().getName());
-        new Async();
+
         super.onCreate();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.d(TAG, "onCreate: "+Thread.currentThread().getName());
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -40,7 +41,7 @@ public class MyService extends Service {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                Thread.sleep(10000);
+                Thread.sleep(500000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
