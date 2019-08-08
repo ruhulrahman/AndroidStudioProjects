@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/SingleItem"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/movieImageTV"
+                android:src="@drawable/avengers"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="7"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="18dp"
+                android:textColor="@color/orange"
+                android:id="@+id/movieNameTV"
+                android:text="Avengers: Endgame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/directorNameTV"
+                android:text="Anthony Russo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

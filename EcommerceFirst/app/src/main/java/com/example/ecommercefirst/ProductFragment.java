@@ -35,7 +35,7 @@ public class ProductFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_product, container, false);
-        productRV = view.findViewById(R.id.itemRV);
+        productRV = view.findViewById(R.id.productRV);
 
 
         init();
@@ -44,6 +44,12 @@ public class ProductFragment extends Fragment {
 
         return view;
     }
+
+    private void init() {
+        products = new ArrayList<>();
+        productAdapter = new ProductAdapter(products);
+    }
+
     private void getProducts() {
         Product product1 = new Product("Phone", "01", 2500, R.drawable.phone);
         Product product2 = new Product("iPhone", "02", 7500, R.drawable.iphone);
@@ -70,10 +76,7 @@ public class ProductFragment extends Fragment {
         productRV.setAdapter(productAdapter);
     }
 
-    private void init() {
-        products = new ArrayList<>();
-        productAdapter = new ProductAdapter(products);
-    }
+
 
 
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="orange">#FF5722</color>
+    <color name="nasu_purple">#5f27cd</color>
+    <color name="bluebell">#341f97</color>
+    <color name="amour">#ee5253</color>
+    <color name="pink">#f368e0</color>
+    <color name="dark_mountain">#10ac84</color>
+    <color name="white">#FFF</color>
+</resources>
