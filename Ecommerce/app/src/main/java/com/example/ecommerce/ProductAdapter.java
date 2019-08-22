@@ -1,6 +1,5 @@
-package com.example.ecommercefirst;
+package com.example.ecommerce;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,27 +12,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
-    private ArrayList<Product> products;
-    private Context context;
 
-    public ProductAdapter(ArrayList<Product> products, Context context) {
+    private ArrayList<Product> products;
+
+    public ProductAdapter() {
+
+    }
+
+    public ProductAdapter(ArrayList<Product> products) {
         this.products = products;
-        this.context = context;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_product, parent, false);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.prodoct_item_view, viewGroup, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Product product = products.get(position);
-        holder.productNameTv.setText(product.getProductName());
-        holder.productPriceTv.setText(String.valueOf(product.getProductPrice()));
-        holder.productImage.setImageResource(product.getProductImage());
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+
+        Product currentProduct = products.get(i);
+        viewHolder.productNameTv.setText(currentProduct.getProductName());
+        viewHolder.productPriceTv.setText(currentProduct.getProductPrice()+" Tk");
+        viewHolder.productIv.setImageResource(currentProduct.getProductImage());
     }
 
     @Override
@@ -42,13 +45,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView productImage;
         private TextView productNameTv, productPriceTv;
+        private ImageView productIv;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            productImage = itemView.findViewById(R.id.productImage);
             productNameTv = itemView.findViewById(R.id.productNameTv);
             productPriceTv = itemView.findViewById(R.id.productPriceTv);
+            productIv = itemView.findViewById(R.id.productIV);
         }
     }
 }

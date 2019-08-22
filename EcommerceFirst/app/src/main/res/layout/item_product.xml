@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:orientation="vertical">
+    android:orientation="vertical">  
 
     <LinearLayout
         android:orientation="vertical"
@@ -11,18 +11,17 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/productIV"
+            android:id="@+id/productImage"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_person_black_24dp" />
 
-        <view
+        <View
             android:background="@android:color/darker_gray"
             android:layout_width="match_parent"
             android:layout_height="2dp">
-
-        </view>
+        </View>
 
         <TextView
             android:id="@+id/productNameTv"
