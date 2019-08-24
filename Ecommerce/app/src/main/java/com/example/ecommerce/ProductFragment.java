@@ -15,14 +15,15 @@ import android.view.ViewGroup;
 import com.example.ecommerce.databinding.FragmentProductBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ProductFragment extends Fragment {
-    private FragmentProductBinding binding;
-    private ArrayList<Product> products;
+    private List<Product> products;
+    private RecyclerView productRV;
     private ProductAdapter productAdapter;
     private Context context;
 
@@ -48,13 +49,14 @@ public class ProductFragment extends Fragment {
     }
 
     private void init(View view) {
+        productRV = view.findViewById(R.id.productRV);
         products = new ArrayList<>();
-        productAdapter = new ProductAdapter(products);
+        productAdapter = new ProductAdapter(getActivity(),products);
     }
 
     private void configRecyclerView() {
-        binding.productRV.setLayoutManager(new GridLayoutManager(context,2));
-        binding.productRV.setAdapter(productAdapter);
+        productRV.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        productRV.setAdapter(productAdapter);
     }
 
     private void getProducts() {

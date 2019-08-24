@@ -1,5 +1,7 @@
 package com.example.ecommerce;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,16 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
 
-    private ArrayList<Product> products;
+    private Context context;
+    private List<Product> products;
 
-    public ProductAdapter() {
-
-    }
-
-    public ProductAdapter(ArrayList<Product> products) {
+    public ProductAdapter(Context context, List<Product> products) {
+        this.context = context;
         this.products = products;
     }
 
@@ -33,10 +34,21 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
 
-        Product currentProduct = products.get(i);
+        final Product currentProduct = products.get(i);
         viewHolder.productNameTv.setText(currentProduct.getProductName());
-        viewHolder.productPriceTv.setText(currentProduct.getProductPrice()+" Tk");
+        viewHolder.productPriceTv.setText(String.valueOf(currentProduct.getProductPrice())+" Tk");
         viewHolder.productIv.setImageResource(currentProduct.getProductImage());
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ProductDetailsActivity.class);
+                intent.putExtra("productName", currentProduct.getProductName());
+                intent.putExtra("productprice", currentProduct.getProductPrice());
+                intent.putExtra("productImage", currentProduct.getProductImage());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
