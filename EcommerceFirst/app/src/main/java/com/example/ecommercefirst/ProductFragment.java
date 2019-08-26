@@ -47,7 +47,7 @@ public class ProductFragment extends Fragment {
 
     private void init() {
         products = new ArrayList<>();
-        productAdapter = new ProductAdapter(products);
+        productAdapter = new ProductAdapter(products, context);
     }
 
     private void getProducts() {
@@ -72,7 +72,7 @@ public class ProductFragment extends Fragment {
     }
 
     private void recyclerViewConfig() {
-        productRV.setLayoutManager(new GridLayoutManager(context, 2));
+        productRV.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         productRV.setAdapter(productAdapter);
     }
 
