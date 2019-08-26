@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pomegranet"
-    tools:context=".LoginActivity">
+    tools:context=".SignUpActivity">
 
     <LinearLayout
         android:layout_centerInParent="true"
@@ -16,11 +15,11 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="Login Panel"
+            android:text="SignUp Panel"
             android:padding="10dp"
             android:shadowColor="@android:color/background_dark"
             android:textSize="@android:dimen/app_icon_size"
-            android:textColor="@android:color/white"
+            android:textColor="@color/blackLigh"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -45,7 +44,7 @@
 
         <Button
             android:layout_marginTop="20dp"
-            android:text="Login"
+            android:text="SignUp"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:padding="15dp"
@@ -58,15 +57,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Don't have an account? "
+                android:text="Already have an account? "
                 android:layout_marginTop="20dp"
                 android:shadowColor="@android:color/background_dark"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
-                android:text="Click SignUp"
-                android:onClick="signUp"
+                android:text="Click Login"
+                android:onClick="LoginClick"
                 android:layout_marginTop="20dp"
                 android:shadowColor="@android:color/background_dark"
                 android:textColor="@color/black"
