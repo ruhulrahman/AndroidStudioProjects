@@ -4,14 +4,13 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:orientation="vertical">
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/productIV"
+            android:id="@+id/productImage"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:scaleType="fitXY"
@@ -21,7 +20,6 @@
             android:background="@android:color/darker_gray"
             android:layout_width="match_parent"
             android:layout_height="2dp">
-
         </View>
 
         <TextView

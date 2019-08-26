@@ -32,7 +32,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Product currentProduct = products.get(position);
-        holder.productIV.setImageResource(currentProduct.getProductImage());
+        holder.productImage.setImageResource(currentProduct.getProductImage());
         holder.productNameTv.setText(currentProduct.getProductName());
         holder.productPriceTv.setText(String.valueOf(currentProduct.getProductPrice()));
 
@@ -46,7 +46,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
                 context.startActivity(intent);
             }
         });
-
+        Product product = products.get(position);
+        holder.productNameTv.setText(product.getProductName());
+        holder.productPriceTv.setText(String.valueOf(product.getProductPrice()));
+        holder.productImage.setImageResource(product.getProductImage());
     }
 
     @Override
@@ -55,12 +58,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        private ImageView productImage;
         private TextView productNameTv, productPriceTv;
-        private ImageView productIV;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            productIV = itemView.findViewById(R.id.productIV);
+            productImage = itemView.findViewById(R.id.productImage);
             productNameTv = itemView.findViewById(R.id.productNameTv);
             productPriceTv = itemView.findViewById(R.id.productPriceTv);
         }
