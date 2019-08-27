@@ -1,4 +1,4 @@
-package com.example.firebasephoneauth;
+package com.testing.dev.firebasephoneauth;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.firebasephoneauth", appContext.getPackageName());
+        assertEquals("com.testing.dev.firebasephoneauth", appContext.getPackageName());
     }
 }

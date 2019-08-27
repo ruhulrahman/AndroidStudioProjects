@@ -1,4 +1,4 @@
-package com.example.firebasephoneauth;
+package com.testing.dev.firebasephoneauth;
 
 import androidx.appcompat.app.AppCompatActivity;
 
